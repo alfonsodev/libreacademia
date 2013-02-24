@@ -1,0 +1,31 @@
+{
+  "name": "libreacademia",
+  "version": "0.0.0",
+  "description": "a free knowledge sharing app",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:alfonsodev/libreacademia.git"
+  },
+  "dependencies": {
+    "component": "0.10.1",
+    "jade": "~0.27.7",
+    "express": "*",
+    "passport": "*"
+  },
+  "keywords": [
+    "free",
+    "knowledge",
+    "sharing",
+    "education"
+  ],
+  "author": "Alfonso Fernández @alfonsodev",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
