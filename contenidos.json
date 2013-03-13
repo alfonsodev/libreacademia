@@ -1,0 +1,30 @@
+{
+    "course": "Bachillerato 2",
+    "topics": [
+        {
+        "topic": "Álgebra lineal",
+        "description": "
+            – Estudio de las matrices como herramienta para manejar y operar con datos estructurados en tablas y grafos.
+            – Operaciones con matrices. Aplicación de las operaciones y de sus propiedades en la resolución de problemas extraídos de contextos reales.
+            – Determinantes. Propiedades elementales de los determinantes. Rango de una matriz.
+            – Discusión y resolución de sistemas de ecuaciones lineales."
+        },
+        {
+        "topic": "Geometría":
+– Vectores en el espacio tridimensional. Producto
+escalar, vectorial y mixto. Significado geométrico.
+– Ecuaciones de la recta y el plano en el espacio.
+Resolución de problemas de posiciones relativas. Resolución de problemas métricos relacionados con el cálculo
+de ángulos, distancias, áreas y volúmenes.
+3. Análisis:
+– Concepto de límite de una función. Cálculo de límites.
+– Continuidad de una función. Tipos de discontinuidad.
+– Interpretación geométrica y física del concepto de
+derivada de una función en un punto.
+– Función derivada. Cálculo de derivadas. Derivada
+de la suma, el producto y el cociente de funciones y de la
+función compuesta. Aplicación de la derivada al estudio
+de las propiedades locales de una función. Problemas de
+optimización.
+– Introducción al concepto de integral definida a partir del cálculo de áreas encerradas bajo una curva. Técnicas elementales para el cálculo de primitivas. Aplicación
+al cálculo de áreas de regiones planas.
