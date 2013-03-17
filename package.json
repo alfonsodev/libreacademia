@@ -18,7 +18,11 @@
     "component": "0.10.1",
     "jade": "~0.27.7",
     "express": "*",
-    "passport": "*"
+    "passport": "*",
+    "async": "*"
+  },
+  "devDependencies": {
+    "should": "*"
   },
   "keywords": [
     "free",
