@@ -1,25 +1,36 @@
 "use strict";
 var express = require ('express'),
-    Search = require('./lib/search'),
-    search = new Search(),
+    path = require('path'),
     app = express();
 
-app.use(express.bodyParser());
-app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
+// Aplication modules
+var search = require('./lib/search');
 
-//router
+app.configure(function(){
+    app.set('port', process.env.PORT || 3000);
+    app.set('views', __dirname + '/views');
+    app.set('view engine', 'html');
+    app.set('layout', 'layout');
+    app.enable('view cache');
+    app.engine('html', require('hogan-express'));
+    app.use(express.bodyParser());
+    app.use(express.methodOverride());
+    app.use(app.router);
+    app.use(express.static(path.join(__dirname, 'public')));
+
+    //Application modules
+    app.use(search);
+});
+
+app.configure('development', function() {
+    app.use(express.errorHandler());
+    app.disable('view cache');
+});
+
+// Router
 app.get('/', function(req, res) {
-    res.render('home');
+    res.render('home', { title: 'libroAacademia' });
 });
-app.post('/search', function(req, res) {
-    search.query('foo', function(err, data){
-        console.log(data[0]);
-        res.render('home');
-    });
-});
-
 
 app.listen(3000);
-
 console.log('listening on port 3000');

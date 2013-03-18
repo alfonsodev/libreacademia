@@ -16,10 +16,10 @@
   "dependencies": {
     "googleapis": "*",
     "component": "0.10.1",
-    "jade": "~0.27.7",
     "express": "*",
     "passport": "*",
-    "async": "*"
+    "async": "*",
+    "hogan-express": "~0.3.3"
   },
   "devDependencies": {
     "should": "*"
