@@ -19,7 +19,8 @@
     "express": "*",
     "passport": "*",
     "async": "*",
-    "hogan-express": "~0.3.3"
+    "hogan-express": "~0.3.3",
+    "request": "*"
   },
   "devDependencies": {
     "should": "*"

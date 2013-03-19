@@ -1,18 +1,17 @@
 search
 ===
-Open educational resourser searcher
-it is a wrapper for Youtube, Wikipedia, Wikibooks
+Combine search in youtube, wikipedia.
+it defines a express route /search (GET)
+expects q parameter as search term i.e( /search?q=alegebra )
+it sends back an array of objects with this basic structure:
 
-- Usage
+    Resource
+    [
+        {
+            url: <string>,
+            title: <string>,
+            thumbnail: <string>
+        }
+    ]
 
-    // let's say we want results about relativity
-    var search = require('search');
-
-    search('relativity', function(err, data){
-        console.log(data);
-    });
-
-- Filtering
-
-    //You want only books
 
