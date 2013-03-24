@@ -1,0 +1,36 @@
+#header {
+    background: url('/assets/img/tree3.png') no-repeat 50px 10px;
+    height: 147px;
+}
+
+#mainNavigation {
+    padding-left: 120px;
+    padding-top: 17px;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35pt;
+}
+
+
+/* Style the search input field. */
+.golike {
+    float:left;
+    width:450px;
+    height:27px;
+    line-height:27px;
+    text-indent:10px;
+    font-family:arial, sans-serif;
+    font-size:1em;
+    color:#333;
+    background: #fff;
+    border:solid 1px #d9d9d9;
+    border-top:solid 1px #c0c0c0;
+}
+
+.searchButton {
+
+}
+
+

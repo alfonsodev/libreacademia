@@ -1,39 +1,37 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <script type="text/javascript" src ="http://code.jquery.com/jquery-latest.js"></script>
-
-        <script type="text/javascript">// <![CDATA[
-      $("#searchterm").keyup(function(e) {
-        console.log('event keyup');
-        var q = $("#searchterm").val();
-        $.getJSON("http://en.wikipedia.org/w/api.php?callback=?",
-        {
-          srsearch: q,
-          action: "query",
-          list: "search",
-          format: "json"
-        },
-        function(data) {
-          $("#results").empty();
-          $("#results").append("Results for <b>" + q + "</b>");
-          $.each(data.query.search, function(i,item){
-            $("#results").append("<div><a href='http://en.wikipedia.org/wiki/" + encodeURIComponent(item.title) + "'>" + item.title + "</a>" + item.snippet + "</div>");
-          });
-        });
-      });
-
-// ]]></script>
-
-
+        <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+        <script type="text/javascript" src =" http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src ="/assets/js/searchbox.js"></script>
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="/assets/css/main.css" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <p><h1>libreAcademia</h1></p>
-        <ul>
-            <li>
-                <a href="/en">english</a>
-                <a href="/es">spanish</a>
-            </li>
-        </ul>
-        {{{ yield }}}
+    <div class="row" id="header">
+      <div class="span12">
+        <div class="row">
+          <div class="span8 offset1" id="title" >
+            <h1>libre Academia</h1>
+          </div>
+          <div class="span2" id="user">english | spanish</div>
+        </div>
+        <div class="row">
+          <div class="span8 offset1" id="search">
+            <input id="searchterm" class="golike" type="text" placeholder="Type your search" />
+            <button class="btn btn-success">search</button>
+          </div>
+          <div class="span2" id="user">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="span12" id="content">
+          {{{ yield }}}
+      </div>
+    </div>
     </body>
 </html>
