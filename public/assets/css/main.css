@@ -1,11 +1,19 @@
-#header {
+body {
+    font-family: "arial, sans-serif";
+}
+.header-box {
     background: url('/assets/img/tree3.png') no-repeat 50px 10px;
     height: 147px;
 }
 
-#mainNavigation {
-    padding-left: 120px;
+.title-box {
+    margin-left: 150px;
     padding-top: 17px;
+}
+
+.search-box {
+    margin-left: 150px;
+    margin-top: 10px;
 }
 
 h1 {
@@ -13,12 +21,20 @@ h1 {
     font-size: 35pt;
 }
 
+h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: auto;
+    line-height: 22px;
+}
 
-/* Style the search input field. */
-.golike {
-    float:left;
-    width:450px;
-    height:27px;
+.search-typeahead {
+    width: 450px;
+    height: 100px;
     line-height:27px;
     text-indent:10px;
     font-family:arial, sans-serif;
@@ -29,8 +45,10 @@ h1 {
     border-top:solid 1px #c0c0c0;
 }
 
-.searchButton {
-
+.curso {
+    height: 100px;
+    margin-bottom: 10px;
 }
-
-
+.curso h3 {
+    
+}

@@ -1,0 +1,16 @@
+sudo curl -XPUT localhost:9200/_river/wikipedia/_meta -d '
+{
+    "type" : "wikipedia",
+    "wikipedia" : {
+        "url" : "http://dumps.wikimedia.org/anwiki/latest/anwiki-latest-pages-articles.xml.bz2"
+    }
+}'
+
+
+sudo curl -XPUT localhost:9200/_river/wikipedia_es/_meta -d '
+{
+    "type" : "wikipedia",
+    "wikipedia" : {
+        "url" : "http://dumps.wikimedia.org/anwiki/latest/eswiki-latest-pages-articles.xml.bz2"
+    }
+}'

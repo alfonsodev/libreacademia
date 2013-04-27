@@ -1,13 +1,14 @@
 {
   "name": "libreacademia",
-  "version": "0.0.0",
+  "version": "0.0.0-1",
   "description": "a free knowledge sharing app",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,8 @@
     "request": "*"
   },
   "devDependencies": {
-    "should": "*"
+    "should": "*",
+    "progress": "*"
   },
   "keywords": [
     "free",
@@ -33,5 +35,9 @@
   ],
   "author": "Alfonso Fernández @alfonsodev",
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "subdomain": "libre",
+  "engines": {
+    "node": "0.8.x"
+  }
 }

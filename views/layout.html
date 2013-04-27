@@ -3,24 +3,24 @@
     <head>
         <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
         <script type="text/javascript" src =" http://code.jquery.com/jquery-latest.js"></script>
-        <script type="text/javascript" src ="/assets/js/searchbox.js"></script>
+        <script type="text/javascript" src ="/assets/js/underscore-min.js"></script>
         <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
         <link href="/assets/css/bootstrap-responsive.min.css" rel="stylesheet">
         <link href="/assets/css/main.css" rel="stylesheet" type="text/css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     </head>
     <body>
-    <div class="row" id="header">
+    <div class="row header-box">
       <div class="span12">
         <div class="row">
-          <div class="span8 offset1" id="title" >
+          <div class="span8 offset1 title-box" >
             <h1>libre Academia</h1>
           </div>
           <div class="span2" id="user">english | spanish</div>
         </div>
         <div class="row">
-          <div class="span8 offset1" id="search">
-            <input id="searchterm" class="golike" type="text" placeholder="Type your search" />
+          <div class="span8 offset1 search-box">
+            <input type="text" class="search-typeahead" data-provide="typeahead">
             <button class="btn btn-success">search</button>
           </div>
           <div class="span2" id="user">&nbsp;</div>
@@ -28,10 +28,41 @@
       </div>
     </div>
     <hr>
-    <div class="row">
-      <div class="span12" id="content">
-          {{{ yield }}}
-      </div>
-    </div>
+    {{{ yield }}}
+  <script type="text/javascript" src ="/assets/js/bootstrap.min.js"></script>
+  <script>
+  $(document).ready(function() {
+
+    $('.search-typeahead').typeahead({
+        source: function (query, process) {
+            return $.get('/search', { q: query }, function (data) {
+                var mapData = $.map(data, function(item) {
+                    return item.url + '<@>' + item.source + '/' + item.title;
+                });
+                return process(mapData);
+            });
+        },
+        highlighter: function(item) {
+          var parts = item.split('<@>'),
+          html = '<div class="typeahead">';
+          html += '<div class="left">';
+          html += '<div><a href="'+parts[0]+'">'+parts[1]+'</a></div>';
+          html += '</div>';
+          html += '<div class="clear"></div>';
+          html += '</div>';
+          return html;
+        },
+        updater: function(item) {
+          var parts = item.split('<@>');
+          return parts[1];
+        },
+        items: 20,
+        menu: '<ul class="typeahead dropdown-menu"></ul>',
+        item: '<li><a href="/'+this.url+'"></a></li>'
+    });
+
+
+  });
+</script>
     </body>
 </html>
