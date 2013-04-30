@@ -20,3 +20,4 @@ coverage.html
 adapters-cov
 ohs-2.3.2
 temp
+bin/.cache

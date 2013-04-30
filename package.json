@@ -1,6 +1,11 @@
 {
   "name": "libreacademia",
-  "version": "0.0.0-1",
+  "subdomain": "libre",
+  "domains": [
+    "libre.io",
+    "www.libre.io"
+  ],
+  "version": "0.0.0-3",
   "description": "a free knowledge sharing app",
   "main": "index.js",
   "directories": {
@@ -36,7 +41,6 @@
   "author": "Alfonso Fernández @alfonsodev",
   "license": "MIT",
   "readmeFilename": "README.md",
-  "subdomain": "libre",
   "engines": {
     "node": "0.8.x"
   }
