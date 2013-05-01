@@ -5,7 +5,7 @@
     "libre.io",
     "www.libre.io"
   ],
-  "version": "0.0.0-10",
+  "version": "0.0.0-11",
   "description": "a free knowledge sharing app",
   "main": "index.js",
   "directories": {
