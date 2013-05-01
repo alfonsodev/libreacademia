@@ -5,7 +5,7 @@
     "libre.io",
     "www.libre.io"
   ],
-  "version": "0.0.0-3",
+  "version": "0.0.0-10",
   "description": "a free knowledge sharing app",
   "main": "index.js",
   "directories": {
@@ -20,13 +20,15 @@
     "url": "git@github.com:alfonsodev/libreacademia.git"
   },
   "dependencies": {
-    "googleapis": "*",
+    "googleapis": "0.2.5-alpha",
     "component": "0.10.1",
     "express": "*",
     "passport": "*",
     "async": "*",
     "hogan-express": "~0.3.3",
-    "request": "*"
+    "request": "*",
+    "nano": "*",
+    "debug": "*"
   },
   "devDependencies": {
     "should": "*",
